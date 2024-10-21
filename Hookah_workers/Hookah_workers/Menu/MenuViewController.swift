@@ -20,7 +20,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func clickedAddPadding(_ sender: UIButton) {
-//        self.pushViewController(PartiesViewController.self)
+        self.pushViewController(PaddingFormViewController.self)
     }
     
     @IBAction func clickedRating(_ sender: UIButton) {
