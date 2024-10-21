@@ -8,19 +8,12 @@
 import UIKit
 
 extension UIViewController {
-    func setNavigationBar(title: String, setButtons: Bool = true) {
-        if setButtons {
-            let backButton = UIButton(type: .custom)
-            backButton.setImage(UIImage.back, for: .normal)
-            backButton.imageView?.contentMode = .scaleAspectFit
-            backButton.addTarget(self, action: #selector(clickedBack), for: .touchUpInside)
-            navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
-            
-            let menuButton = UIButton(type: .custom)
-            menuButton.setImage(UIImage.menu, for: .normal)
-            menuButton.addTarget(self, action: #selector(clickedMenu), for: .touchUpInside)
-            navigationItem.rightBarButtonItem = UIBarButtonItem(customView: menuButton)
-        }
+    func setNavigationBar(title: String) {
+        let backButton = UIButton(type: .custom)
+        backButton.setImage(UIImage.back, for: .normal)
+        backButton.imageView?.contentMode = .scaleAspectFit
+        backButton.addTarget(self, action: #selector(clickedBack), for: .touchUpInside)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         
         let titleLabel = UILabel()
         titleLabel.text = title
@@ -31,34 +24,18 @@ extension UIViewController {
         navigationItem.titleView = titleLabel
     }
     
-    func setNaviagtionBackButton(image: UIImage = .back) {
+    func setNaviagtionCloseButton() {
         let backButton = UIButton(type: .custom)
-        backButton.setImage(image, for: .normal)
+        backButton.setImage(UIImage.close, for: .normal)
         backButton.imageView?.contentMode = .scaleAspectFit
         backButton.addTarget(self, action: #selector(clickedBack), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
     }
     
-    func setNaviagtionMenuButton() {
-        let menuButton = UIButton(type: .custom)
-        menuButton.setImage(UIImage.menu, for: .normal)
-        menuButton.addTarget(self, action: #selector(clickedMenu), for: .touchUpInside)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: menuButton)
-    }
-    
     @objc func clickedBack() {
         navigationController?.popViewController(animated: true)
     }
-    
-    @objc func clickedMenu() {
-        if let menuVC = navigationController?.viewControllers.first(where: { $0 is MenuViewController }) {
-            self.navigationController?.popToViewController(menuVC, animated: true)
-        } else if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
-            let menuVC = UIStoryboard(name: "Menu", bundle: .main).instantiateViewController(identifier: "NavigationViewController")
-            sceneDelegate.window?.rootViewController = menuVC
-        }
-    }
-    
+        
     @objc func handleTap() {
         self.view.endEditing(true)
     }

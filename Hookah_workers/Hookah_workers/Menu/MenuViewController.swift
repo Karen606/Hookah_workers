@@ -28,6 +28,6 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func clickedSetting(_ sender: UIButton) {
-//        self.pushViewController(SettingViewController.self)
+        self.pushViewController(SettingViewController.self)
     }}
 

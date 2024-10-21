@@ -21,6 +21,8 @@
 		6BCE243D2CC6D3E700D04B0A /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24382CC6D3E700D04B0A /* Montserrat-Bold.ttf */; };
 		6BCE243E2CC6D3E700D04B0A /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24392CC6D3E700D04B0A /* Montserrat-ExtraBold.ttf */; };
 		6BCE24402CC6D83300D04B0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE243F2CC6D83300D04B0A /* ViewController.swift */; };
+		6BCE24452CC6D9CC00D04B0A /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE24442CC6D9CC00D04B0A /* SettingViewController.xib */; };
+		6BCE24462CC6D9CC00D04B0A /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24432CC6D9CC00D04B0A /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		6BCE24382CC6D3E700D04B0A /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		6BCE24392CC6D3E700D04B0A /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		6BCE243F2CC6D83300D04B0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6BCE24432CC6D9CC00D04B0A /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		6BCE24442CC6D9CC00D04B0A /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +76,11 @@
 		6BCE24192CC6D14D00D04B0A /* Hookah_workers */ = {
 			isa = PBXGroup;
 			children = (
+				6BCE24422CC6D9BE00D04B0A /* Setting */,
+				6BCE24412CC6D9B300D04B0A /* Menu */,
 				6BCE24312CC6D36400D04B0A /* Extensions */,
 				6BCE241A2CC6D14D00D04B0A /* AppDelegate.swift */,
 				6BCE241C2CC6D14D00D04B0A /* SceneDelegate.swift */,
-				6BCE241E2CC6D14D00D04B0A /* MenuViewController.swift */,
-				6BCE24202CC6D14D00D04B0A /* Menu.storyboard */,
 				6BCE24262CC6D14F00D04B0A /* Assets.xcassets */,
 				6BCE24282CC6D14F00D04B0A /* LaunchScreen.storyboard */,
 				6BCE242B2CC6D14F00D04B0A /* Info.plist */,
@@ -105,6 +109,24 @@
 				6BCE24372CC6D3E700D04B0A /* Montserrat-SemiBold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		6BCE24412CC6D9B300D04B0A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				6BCE241E2CC6D14D00D04B0A /* MenuViewController.swift */,
+				6BCE24202CC6D14D00D04B0A /* Menu.storyboard */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		6BCE24422CC6D9BE00D04B0A /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				6BCE24432CC6D9CC00D04B0A /* SettingViewController.swift */,
+				6BCE24442CC6D9CC00D04B0A /* SettingViewController.xib */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BCE243C2CC6D3E700D04B0A /* Montserrat-SemiBold.ttf in Resources */,
+				6BCE24452CC6D9CC00D04B0A /* SettingViewController.xib in Resources */,
 				6BCE243A2CC6D3E700D04B0A /* Montserrat-Regular.ttf in Resources */,
 				6BCE243B2CC6D3E700D04B0A /* Montserrat-Medium.ttf in Resources */,
 				6BCE24272CC6D14F00D04B0A /* Assets.xcassets in Resources */,
@@ -188,6 +211,7 @@
 				6BCE24252CC6D14D00D04B0A /* Hookah_workers.xcdatamodeld in Sources */,
 				6BCE24342CC6D3A700D04B0A /* Font.swift in Sources */,
 				6BCE241B2CC6D14D00D04B0A /* AppDelegate.swift in Sources */,
+				6BCE24462CC6D9CC00D04B0A /* SettingViewController.swift in Sources */,
 				6BCE241D2CC6D14D00D04B0A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
