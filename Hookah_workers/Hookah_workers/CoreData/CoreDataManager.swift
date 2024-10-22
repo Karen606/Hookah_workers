@@ -77,4 +77,61 @@ class CoreDataManager {
             }
         }
     }
+    
+    func updatePaddingRating(by id: UUID, newRating: Double, completion: @escaping (Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Padding> = Padding.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+            
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                
+                if let padding = results.first {
+                    padding.rating = newRating
+                    try backgroundContext.save()
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        completion(NSError(domain: "", code: 404, userInfo: [NSLocalizedDescriptionKey: "Padding not found"]))
+                    }
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(error)
+                }
+            }
+        }
+    }
+    
+    func removePadding(by id: UUID, completion: @escaping (Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Padding> = Padding.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+            
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                
+                if let padding = results.first {
+                    backgroundContext.delete(padding)
+                    try backgroundContext.save()
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
+                } else {
+                    // Padding with the given ID not found
+                    DispatchQueue.main.async {
+                        completion(NSError(domain: "", code: 404, userInfo: [NSLocalizedDescriptionKey: "Padding not found"]))
+                    }
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(error)
+                }
+            }
+        }
+    }
 }

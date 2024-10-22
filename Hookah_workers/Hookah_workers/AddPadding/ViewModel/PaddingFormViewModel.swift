@@ -14,6 +14,7 @@ class PaddingFormViewModel {
     private init() {}
     
     func save(completion: @escaping (Error?) -> Void) {
+        paddingModel.flavors.removeAll(where: { !$0.checkValidation() })
         CoreDataManager.shared.savePadding(paddingModel: paddingModel) { error in
             completion(error)
         }

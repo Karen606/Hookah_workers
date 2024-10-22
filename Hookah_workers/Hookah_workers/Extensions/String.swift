@@ -13,3 +13,9 @@ extension String? {
         return !self.trimmingCharacters(in: .whitespaces).isEmpty
     }
 }
+
+extension String {
+    func checkValidation() -> Bool {
+        return !self.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+}

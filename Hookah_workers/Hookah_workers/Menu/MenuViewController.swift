@@ -16,7 +16,7 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func clickedMyStuffing(_ sender: UIButton) {
-//        self.pushViewController(CreatePartyViewController.self)
+        self.pushViewController(StuffingsViewController.self)
     }
     
     @IBAction func clickedAddPadding(_ sender: UIButton) {

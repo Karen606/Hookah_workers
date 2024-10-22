@@ -21,7 +21,7 @@ class PaddingFormViewController: UIViewController {
     @IBOutlet weak var saveButton: BaseButton!
     private let viewModel = PaddingFormViewModel.shared
     private var cancellables: Set<AnyCancellable> = []
-
+    var complition: (() -> ())?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -92,6 +92,7 @@ class PaddingFormViewController: UIViewController {
             if let error = error {
                 self.showErrorAlert(message: error.localizedDescription)
             } else {
+                self.complition?()
                 self.navigationController?.popViewController(animated: true)
             }
         }
