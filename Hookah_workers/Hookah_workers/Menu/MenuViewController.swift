@@ -24,7 +24,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func clickedRating(_ sender: UIButton) {
-//        self.pushViewController(CoctailsViewController.self)
+        self.pushViewController(TobacoRatingViewController.self)
     }
     
     @IBAction func clickedSetting(_ sender: UIButton) {

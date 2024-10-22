@@ -41,6 +41,9 @@
 		6BCE24732CC7025200D04B0A /* StuffingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24702CC7025200D04B0A /* StuffingTableViewCell.swift */; };
 		6BCE24762CC7077100D04B0A /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 6BCE24752CC7077100D04B0A /* Cosmos */; };
 		6BCE24792CC70A1D00D04B0A /* StuffingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24782CC70A1D00D04B0A /* StuffingsViewModel.swift */; };
+		6BCE247E2CC726FC00D04B0A /* TobacoRatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BCE247D2CC726FC00D04B0A /* TobacoRatingViewController.xib */; };
+		6BCE247F2CC726FC00D04B0A /* TobacoRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE247C2CC726FC00D04B0A /* TobacoRatingViewController.swift */; };
+		6BCE24822CC727D000D04B0A /* RatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCE24812CC727D000D04B0A /* RatingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +82,9 @@
 		6BCE24702CC7025200D04B0A /* StuffingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffingTableViewCell.swift; sourceTree = "<group>"; };
 		6BCE24712CC7025200D04B0A /* StuffingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StuffingTableViewCell.xib; sourceTree = "<group>"; };
 		6BCE24782CC70A1D00D04B0A /* StuffingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StuffingsViewModel.swift; sourceTree = "<group>"; };
+		6BCE247C2CC726FC00D04B0A /* TobacoRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TobacoRatingViewController.swift; sourceTree = "<group>"; };
+		6BCE247D2CC726FC00D04B0A /* TobacoRatingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TobacoRatingViewController.xib; sourceTree = "<group>"; };
+		6BCE24812CC727D000D04B0A /* RatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		6BCE24192CC6D14D00D04B0A /* Hookah_workers */ = {
 			isa = PBXGroup;
 			children = (
+				6BCE247A2CC726DE00D04B0A /* Rating */,
 				6BCE24692CC7019600D04B0A /* Stuffings */,
 				6BCE24472CC6DBDF00D04B0A /* AddPadding */,
 				6BCE24422CC6D9BE00D04B0A /* Setting */,
@@ -262,6 +269,32 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6BCE247A2CC726DE00D04B0A /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				6BCE24802CC727C500D04B0A /* ViewModel */,
+				6BCE247B2CC726E300D04B0A /* View */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		6BCE247B2CC726E300D04B0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BCE247C2CC726FC00D04B0A /* TobacoRatingViewController.swift */,
+				6BCE247D2CC726FC00D04B0A /* TobacoRatingViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6BCE24802CC727C500D04B0A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6BCE24812CC727D000D04B0A /* RatingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,6 +372,7 @@
 				6BCE24722CC7025200D04B0A /* StuffingTableViewCell.xib in Resources */,
 				6BCE244F2CC6DC0F00D04B0A /* PaddingFormViewController.xib in Resources */,
 				6BCE243D2CC6D3E700D04B0A /* Montserrat-Bold.ttf in Resources */,
+				6BCE247E2CC726FC00D04B0A /* TobacoRatingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +388,7 @@
 				6BCE241F2CC6D14D00D04B0A /* MenuViewController.swift in Sources */,
 				6BCE24252CC6D14D00D04B0A /* Hookah_workers.xcdatamodeld in Sources */,
 				6BCE24522CC6DCB200D04B0A /* BaseTextField.swift in Sources */,
+				6BCE24822CC727D000D04B0A /* RatingViewModel.swift in Sources */,
 				6BCE24342CC6D3A700D04B0A /* Font.swift in Sources */,
 				6BCE24502CC6DC0F00D04B0A /* PaddingFormViewController.swift in Sources */,
 				6BCE24542CC6E3AE00D04B0A /* BaseButton.swift in Sources */,
@@ -365,6 +400,7 @@
 				6BCE24662CC6FC6B00D04B0A /* PriceTextField.swift in Sources */,
 				6BCE246E2CC701B500D04B0A /* StuffingsViewController.swift in Sources */,
 				6BCE24592CC6E6C900D04B0A /* FlavorTableViewCell.swift in Sources */,
+				6BCE247F2CC726FC00D04B0A /* TobacoRatingViewController.swift in Sources */,
 				6BCE24682CC6FF2C00D04B0A /* UIView.swift in Sources */,
 				6BCE24642CC6FA0400D04B0A /* String.swift in Sources */,
 				6BCE24622CC6F7B700D04B0A /* PaddingFormViewModel.swift in Sources */,

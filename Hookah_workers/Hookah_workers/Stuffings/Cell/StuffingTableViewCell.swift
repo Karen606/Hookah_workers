@@ -37,13 +37,16 @@ class StuffingTableViewCell: UITableViewCell {
     }
     
     @objc func handleCosmosViewTap(_ sender: UITapGestureRecognizer) {
-            if let cosmosView = sender.view as? CosmosView {
-                let location = sender.location(in: cosmosView)
-                let rating = Double(Int(Double(location.x / ratingView.bounds.width) * Double(ratingView.settings.totalStars) + 1))
-                ratingView.rating = rating
-                ratingLabel.text = "\(Int(rating))"
+        if let cosmosView = sender.view as? CosmosView {
+            let location = sender.location(in: cosmosView)
+            let rating = Double(Int(Double(location.x / ratingView.bounds.width) * Double(ratingView.settings.totalStars) + 1))
+            ratingView.rating = rating
+            ratingLabel.text = "\(Int(rating))"
+            if let id = padding?.id {
+                self.delegate?.setRating(value: rating, id: id)
             }
         }
+    }
     
     override func prepareForReuse() {
         padding = nil

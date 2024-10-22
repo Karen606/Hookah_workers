@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TobacoRatingViewController" customModule="Hookah_workers" customModuleProvider="target">
+            <connections>
+                <outlet property="paddingsTableView" destination="Leh-yB-ZrH" id="L0S-vc-1xA"/>
+                <outlet property="ratingView" destination="MlW-WV-FeX" id="B15-1f-cEk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MlW-WV-FeX" customClass="CosmosView" customModule="Cosmos">
+                    <rect key="frame" x="131.66666666666666" y="83" width="129.99999999999997" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="Xzl-cK-KyI"/>
+                        <constraint firstAttribute="width" constant="130" id="mEf-X4-xW5"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="filledImage" value="starFilled"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="emptyImage" value="star"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                            <real key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Leh-yB-ZrH">
+                    <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="MlW-WV-FeX" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="1dg-Ag-vQV"/>
+                <constraint firstItem="MlW-WV-FeX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="Afq-Ae-72h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Leh-yB-ZrH" secondAttribute="bottom" id="Mv9-yN-xah"/>
+                <constraint firstItem="Leh-yB-ZrH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lrt-H1-pbD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Leh-yB-ZrH" secondAttribute="trailing" id="s6i-8E-NFs"/>
+                <constraint firstItem="Leh-yB-ZrH" firstAttribute="top" secondItem="MlW-WV-FeX" secondAttribute="bottom" constant="8" id="zqt-Uz-CtH"/>
+            </constraints>
+            <point key="canvasLocation" x="116.79389312977099" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="star" width="24.333333969116211" height="24"/>
+        <image name="starFilled" width="24.333333969116211" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
