@@ -1,0 +1,6 @@
+framework module Pods_Hookah_workers {
+  umbrella header "Pods-Hookah_workers-umbrella.h"
+
+  export *
+  module * { export * }
+}
